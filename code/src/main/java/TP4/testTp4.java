@@ -81,10 +81,13 @@ public class testTp4 {
 
         // Act
         queue.enqueue(1);
+        final int taille = queue.size();
 
         // Assert
+        assertEquals(taille, 1, "La taille de la queue devrait être de 1.");
         assertNotNull(first.get(queue), "L'attribut first ne devrait pas être null.");
         assertNotNull(last.get(queue), "L'attribut last ne devrait pas être null.");
         assertEquals(n.get(queue), 1, "L'attribut n devrait être égal à 1.");
     }
+
 }
