@@ -41,15 +41,28 @@ public class testTp4 {
         // Assert
         assertEquals(resultat, 0, "L'attribut n devrait être égal à 0.");
         assertEquals(last.get(queue), null, "L'attribut last devrait être null.");
-        assertEquals(first.get(queue), null, "L'aatribut first devrait être null.");
+        assertEquals(first.get(queue), null, "L'attribut first devrait être null.");
     }
 
     /**
      * d04 = < { Queue() -> peek() } , { first == null, last == null, n == 0 } >
      */
     @Test
-    public void d04() {
-        assertEquals(0,0);
+    public void d04() throws NoSuchFieldException, IllegalAccessException {
+        // Arrange
+        queue = new Queue<Integer>();
+        Field last = queue.getClass().getDeclaredField("last");
+        last.setAccessible(true);
+        Field first = queue.getClass().getDeclaredField("first");
+        first.setAccessible(true);
+        Field n = queue.getClass().getDeclaredField("n");
+        n.setAccessible(true);
+
+        // Act & Assert
+        assertThrows(NoSuchElementException.class, () -> queue.peek());
+        assertEquals(last.get(queue), null, "L'attribut last devrait être null.");
+        assertEquals(first.get(queue), null, "L'aatribut first devrait être null.");
+        assertEquals(n.get(queue), 0, "L'attribut n devrait être égal à 0.");
     }
 
 }
