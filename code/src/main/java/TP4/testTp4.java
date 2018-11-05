@@ -116,4 +116,14 @@ public class testTp4 {
         assertNotNull(last.get(queue), "L'attribut last ne devrait pas être null.");
         assertEquals(n.get(queue), 2, "L'Attribut n devrait être égal à 2.");
     }
+
+    /**
+     * d12 = < { Queue() -> enqueue(1) -> enqueue(2) -> enqueue(3) } ,
+               { first == node1, last == node2, n > 1 } >
+     */
+
+    /**
+     * d12 = < { Queue() -> enqueue(1) -> enqueue(2) -> enqueue(3) } ,
+               { first == node1, last == node2, n > 1 } >
+     */
 }
