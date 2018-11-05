@@ -65,4 +65,26 @@ public class testTp4 {
         assertEquals(n.get(queue), 0, "L'attribut n devrait être égal à 0.");
     }
 
+    /**
+     * d06 = < { Queue() -> enqueue(1) -> size() } , { first == node1, last == node1, n == 1 } >
+     */
+    @Test
+    public void d06() throws NoSuchFieldException, IllegalAccessException {
+        // Arrange
+        queue = new Queue<Integer>();
+        Field last = queue.getClass().getDeclaredField("last");
+        last.setAccessible(true);
+        Field first = queue.getClass().getDeclaredField("first");
+        first.setAccessible(true);
+        Field n = queue.getClass().getDeclaredField("n");
+        n.setAccessible(true);
+
+        // Act
+        queue.enqueue(1);
+
+        // Assert
+        assertNotNull(first.get(queue), "L'attribut first ne devrait pas être null.");
+        assertNotNull(last.get(queue), "L'attribut last ne devrait pas être null.");
+        assertEquals(n.get(queue), 1, "L'attribut n devrait être égal à 1.");
+    }
 }
