@@ -114,6 +114,7 @@ public class testTp4 {
         assertEquals(taille, 2, "La taille de la queue devrait être de 2.");
         assertNotNull(first.get(queue), "L'attribut first ne devrait pas être null.");
         assertNotNull(last.get(queue), "L'attribut last ne devrait pas être null.");
+        assertNotEquals(first.get(queue), last.get(queue), "L'attribut first et l'attribut last devrait être différent.");
         assertEquals(n.get(queue), 2, "L'Attribut n devrait être égal à 2.");
     }
 
@@ -121,9 +122,53 @@ public class testTp4 {
      * d12 = < { Queue() -> enqueue(1) -> enqueue(2) -> enqueue(3) } ,
                { first == node1, last == node2, n > 1 } >
      */
+    @Test
+    public void d12() throws NoSuchFieldException, IllegalAccessException {
+        // Arrange
+        queue = new Queue<Integer>();
+        Field last = queue.getClass().getDeclaredField("last");
+        last.setAccessible(true);
+        Field first = queue.getClass().getDeclaredField("first");
+        first.setAccessible(true);
+        Field n = queue.getClass().getDeclaredField("n");
+        n.setAccessible(true);
+
+        // Act
+        queue.enqueue(1);
+        queue.enqueue(2);
+        queue.enqueue(3);
+
+        // Assert
+        assertNotNull(first.get(queue), "L'attribut first ne devrait pas être null.");
+        assertNotNull(last.get(queue), "L'attribut last ne devrait pas être null.");
+        assertNotEquals(first.get(queue), last.get(queue), "L'attribut first et l'attribut last devrait être différent.");
+        assertTrue((int)n.get(queue) >= 2, "L'attribut n devrait être supérieur à 2.");
+    }
+
 
     /**
-     * d12 = < { Queue() -> enqueue(1) -> enqueue(2) -> enqueue(3) } ,
-               { first == node1, last == node2, n > 1 } >
+     * d14 = < { Queue() -> enqueue(1) -> enqueue(2) -> dequeue() } ,
+     *         { first == node1, last == node1, n == 1 } >
      */
+    @Test
+    public void d14() throws NoSuchFieldException, IllegalAccessException {
+        // Arrange
+        queue = new Queue<Integer>();
+        Field last = queue.getClass().getDeclaredField("last");
+        last.setAccessible(true);
+        Field first = queue.getClass().getDeclaredField("first");
+        first.setAccessible(true);
+        Field n = queue.getClass().getDeclaredField("n");
+        n.setAccessible(true);
+
+        // Act
+        queue.enqueue(1);
+        queue.enqueue(2);
+        queue.dequeue();
+
+        // Assert
+        assertNotNull(first.get(queue), "L'attribut first ne devrait pas être null.");
+        assertNotNull(last.get(queue), "L'attribut last ne devrait pas être null.");
+        assertTrue((int)n.get(queue) == 1, "L'Attribut n devrait être égal à 1.");
+    }
 }
