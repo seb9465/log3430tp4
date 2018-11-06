@@ -5,9 +5,7 @@
     <bookmark url="file://$PROJECT_DIR$/src/main/java/TP4/testTp4.java" line="177" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b3755e8d-a38c-4569-819b-19bd0491d302" name="Default" comment="Suppression des Integer inutiles dans les initialisations de queue.">
-      <change beforePath="$PROJECT_DIR$/src/main/java/TP4/testTp4.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/TP4/testTp4.java" afterDir="false" />
-    </list>
+    <list default="true" id="b3755e8d-a38c-4569-819b-19bd0491d302" name="Default" comment="Suppression des Integer inutiles dans les initialisations de queue." />
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -45,9 +43,10 @@
     <session id="-1322120403">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="1" />
+          <entry key="project.closed" value="2" />
           <entry key="project.open.time.11" value="1" />
-          <entry key="project.opened" value="1" />
+          <entry key="project.open.time.16" value="1" />
+          <entry key="project.opened" value="2" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
@@ -68,7 +67,7 @@
         <entry file="file://$PROJECT_DIR$/src/main/java/TP4/testTp4.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="344">
-              <caret line="78" column="77" lean-forward="true" selection-start-line="78" selection-start-column="77" selection-end-line="78" selection-end-column="77" />
+              <caret line="78" column="77" selection-start-line="78" selection-start-column="77" selection-end-line="78" selection-end-column="77" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -133,10 +132,8 @@
     </treeState>
   </component>
   <component name="ProjectFrameBounds" fullScreen="true">
-    <option name="x" value="-8" />
-    <option name="y" value="22" />
-    <option name="width" value="1905" />
-    <option name="height" value="742" />
+    <option name="width" value="1280" />
+    <option name="height" value="800" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -144,7 +141,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -191,6 +187,7 @@
         </subPane>
       </pane>
       <pane id="PackagesPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -312,9 +309,6 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="testTp4 - 2018.11.05 at 13h 46m 09s.xml">
-      <configuration name="testTp4" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="testTp4 - 2018.11.05 at 13h 46m 21s.xml">
       <configuration name="testTp4" configurationId="JUnit" />
     </history-entry>
@@ -342,15 +336,18 @@
     <history-entry file="testTp4 - 2018.11.05 at 20h 59m 57s.xml">
       <configuration name="testTp4" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="testTp4 - 2018.11.06 at 09h 48m 39s.xml">
+      <configuration name="testTp4" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="TimeTrackingManager">
     <option name="totallyTimeSpent" value="1421000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="0" width="1920" height="1080" extended-state="0" />
+    <frame x="0" y="0" width="1280" height="800" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.17199148" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.17447495" />
       <window_info id="Structure" order="1" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -359,7 +356,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32921174" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.21089108" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.20958903" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -399,7 +396,7 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/TP4/testTp4.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="344">
-          <caret line="78" column="77" lean-forward="true" selection-start-line="78" selection-start-column="77" selection-end-line="78" selection-end-column="77" />
+          <caret line="78" column="77" selection-start-line="78" selection-start-column="77" selection-end-line="78" selection-end-column="77" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
