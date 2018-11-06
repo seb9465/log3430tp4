@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b3755e8d-a38c-4569-819b-19bd0491d302" name="Default" comment="Suppression du before each et after each. Inutile.">
+    <list default="true" id="b3755e8d-a38c-4569-819b-19bd0491d302" name="Default" comment="Suppression de imports non utilisés.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/TP4/testTp4.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/TP4/testTp4.java" afterDir="false" />
     </list>
@@ -29,13 +29,13 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="java" value="882" />
-          <entry key="txt" value="199" />
+          <entry key="txt" value="236" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="JAVA" value="882" />
-          <entry key="PLAIN_TEXT" value="199" />
+          <entry key="PLAIN_TEXT" value="236" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open" />
@@ -47,8 +47,11 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/TP4/testTp4.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="51">
-              <caret line="3" column="22" selection-start-line="3" selection-start-column="22" selection-end-line="3" selection-end-column="22" />
+            <state relative-caret-position="255">
+              <caret line="15" column="80" lean-forward="true" selection-start-line="15" selection-start-column="80" selection-end-line="15" selection-end-column="80" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -176,7 +179,7 @@
     <property name="Repository.Attach.Sources" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1541464620327" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1541464647001" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path" value="/usr/local/bin/node" />
     <property name="project.structure.last.edited" value="Libraries" />
@@ -314,7 +317,14 @@
       <option name="project" value="LOCAL" />
       <updated>1541464600555</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Suppression de imports non utilisés.">
+      <created>1541464633249</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1541464633249</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -397,7 +407,8 @@
     <MESSAGE value="Ajustement de quelques tests. Ajout de quelques assert et modifications de d'autres." />
     <MESSAGE value="Ajout du type Integer au Queue." />
     <MESSAGE value="Suppression du before each et after each. Inutile." />
-    <option name="LAST_COMMIT_MESSAGE" value="Suppression du before each et after each. Inutile." />
+    <MESSAGE value="Suppression de imports non utilisés." />
+    <option name="LAST_COMMIT_MESSAGE" value="Suppression de imports non utilisés." />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/main/java/edu/princeton/cs/algs4/Queue.java">
@@ -409,8 +420,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/TP4/testTp4.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="22" selection-start-line="3" selection-start-column="22" selection-end-line="3" selection-end-column="22" />
+        <state relative-caret-position="255">
+          <caret line="15" column="80" lean-forward="true" selection-start-line="15" selection-start-column="80" selection-end-line="15" selection-end-column="80" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

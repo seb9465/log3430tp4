@@ -10,7 +10,7 @@ import static org.junit.jupiter.api.Assertions.*;
 import java.lang.reflect.Field;
 
 public class testTp4 {
-    Queue<Integer> queue;
+    private Queue<Integer> queue;
 
     /**
      * d02 = < { Queue() -> size() } , { first == null, last == null, n == 0 } >
