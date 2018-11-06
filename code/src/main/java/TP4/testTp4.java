@@ -39,7 +39,7 @@ public class testTp4 {
     @Test
     public void d04() throws NoSuchFieldException, IllegalAccessException {
         // Arrange
-        queue = new Queue<Integer>();
+        queue = new Queue<>();
         Field last = queue.getClass().getDeclaredField("last");
         last.setAccessible(true);
         Field first = queue.getClass().getDeclaredField("first");
@@ -60,7 +60,7 @@ public class testTp4 {
     @Test
     public void d06() throws NoSuchFieldException, IllegalAccessException {
         // Arrange
-        queue = new Queue<Integer>();
+        queue = new Queue<>();
         Field last = queue.getClass().getDeclaredField("last");
         last.setAccessible(true);
         Field first = queue.getClass().getDeclaredField("first");
@@ -86,7 +86,7 @@ public class testTp4 {
     @Test
     public void d08() throws NoSuchFieldException, IllegalAccessException {
         // Arrange
-        queue = new Queue<Integer>();
+        queue = new Queue<>();
         Field last = queue.getClass().getDeclaredField("last");
         last.setAccessible(true);
         Field first = queue.getClass().getDeclaredField("first");
@@ -111,7 +111,7 @@ public class testTp4 {
     @Test
     public void d10() throws NoSuchFieldException, IllegalAccessException {
         // Arrange
-        queue = new Queue<Integer>();
+        queue = new Queue<>();
         Field last = queue.getClass().getDeclaredField("last");
         last.setAccessible(true);
         Field first = queue.getClass().getDeclaredField("first");
@@ -139,7 +139,7 @@ public class testTp4 {
     @Test
     public void d12() throws NoSuchFieldException, IllegalAccessException {
         // Arrange
-        queue = new Queue<Integer>();
+        queue = new Queue<>();
         Field last = queue.getClass().getDeclaredField("last");
         last.setAccessible(true);
         Field first = queue.getClass().getDeclaredField("first");
@@ -167,7 +167,7 @@ public class testTp4 {
     @Test
     public void d14() throws NoSuchFieldException, IllegalAccessException {
         // Arrange
-        queue = new Queue<Integer>();
+        queue = new Queue<>();
         Field last = queue.getClass().getDeclaredField("last");
         last.setAccessible(true);
         Field first = queue.getClass().getDeclaredField("first");
