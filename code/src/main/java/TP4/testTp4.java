@@ -2,8 +2,6 @@ package TP4;
 
 import edu.princeton.cs.algs4.Queue;
 import org.junit.Test;
-import org.junit.jupiter.api.AfterEach;
-import org.junit.jupiter.api.BeforeEach;
 
 import java.util.NoSuchElementException;
 
@@ -20,7 +18,7 @@ public class testTp4 {
     @Test
     public void d02() throws NoSuchFieldException, IllegalAccessException {
         // Arrange
-        queue = new Queue<Integer>();
+        queue = new Queue<>();
         Field last = queue.getClass().getDeclaredField("last");
         last.setAccessible(true);
         Field first = queue.getClass().getDeclaredField("first");
