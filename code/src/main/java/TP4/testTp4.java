@@ -14,13 +14,6 @@ import java.lang.reflect.Field;
 public class testTp4 {
     Queue<Integer> queue;
 
-    @BeforeEach
-    void setUp() throws Exception {
-    }
-
-    @AfterEach
-    public void tearDown() throws Exception { }
-
     /**
      * d02 = < { Queue() -> size() } , { first == null, last == null, n == 0 } >
      */
