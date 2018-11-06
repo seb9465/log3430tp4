@@ -25,7 +25,7 @@ public class testTp4 {
         first.setAccessible(true);
 
         // Act
-        int resultat = queue.size();
+        final int resultat = queue.size();
 
         // Assert
         assertEquals(resultat, 0, "L'attribut n devrait être égal à 0.");
@@ -129,7 +129,7 @@ public class testTp4 {
         assertNotNull(first.get(queue), "L'attribut first ne devrait pas être null.");
         assertNotNull(last.get(queue), "L'attribut last ne devrait pas être null.");
         assertNotEquals(first.get(queue), last.get(queue), "L'attribut first et l'attribut last devrait être différent.");
-        assertEquals(n.get(queue), 2, "L'Attribut n devrait être égal à 2.");
+        assertTrue((int)n.get(queue) > 1, "L'attribut n devrait être supérieur à 1.");
     }
 
     /**
@@ -156,7 +156,7 @@ public class testTp4 {
         assertNotNull(first.get(queue), "L'attribut first ne devrait pas être null.");
         assertNotNull(last.get(queue), "L'attribut last ne devrait pas être null.");
         assertNotEquals(first.get(queue), last.get(queue), "L'attribut first et l'attribut last devrait être différent.");
-        assertTrue((int)n.get(queue) >= 2, "L'attribut n devrait être supérieur à 2.");
+        assertTrue((int)n.get(queue) > 1, "L'attribut n devrait être supérieur à 1.");
     }
 
 
@@ -184,6 +184,6 @@ public class testTp4 {
         assertNotNull(first.get(queue), "L'attribut first ne devrait pas être null.");
         assertNotNull(last.get(queue), "L'attribut last ne devrait pas être null.");
         assertEquals(first.get(queue), last.get(queue), "Les attributs first et last devraient être égaux.");
-        assertTrue((int)n.get(queue) == 1, "L'attribut n devrait être égal à 1.");
+        assertEquals((int)n.get(queue), 1, "L'attribut n devrait être égal à 1.");
     }
 }
