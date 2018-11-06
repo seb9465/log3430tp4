@@ -40,8 +40,8 @@ public class testTp4 {
 
         // Assert
         assertEquals(resultat, 0, "L'attribut n devrait être égal à 0.");
-        assertEquals(last.get(queue), null, "L'attribut last devrait être null.");
-        assertEquals(first.get(queue), null, "L'attribut first devrait être null.");
+        assertNull(last.get(queue), "L'attribut last devrait être null.");
+        assertNull(first.get(queue), "L'attribut first devrait être null.");
     }
 
     /**
@@ -60,8 +60,8 @@ public class testTp4 {
 
         // Act & Assert
         assertThrows(NoSuchElementException.class, () -> queue.peek());
-        assertEquals(last.get(queue), null, "L'attribut last devrait être null.");
-        assertEquals(first.get(queue), null, "L'aatribut first devrait être null.");
+        assertNull(last.get(queue), "L'attribut last devrait être null.");
+        assertNull(first.get(queue), "L'attribut first devrait être null.");
         assertEquals(n.get(queue), 0, "L'attribut n devrait être égal à 0.");
     }
 
@@ -87,7 +87,32 @@ public class testTp4 {
         assertEquals(taille, 1, "La taille de la queue devrait être de 1.");
         assertNotNull(first.get(queue), "L'attribut first ne devrait pas être null.");
         assertNotNull(last.get(queue), "L'attribut last ne devrait pas être null.");
+        assertEquals(first.get(queue), last.get(queue), "Les attributs first et last devraient être égaux.");
         assertEquals(n.get(queue), 1, "L'attribut n devrait être égal à 1.");
+    }
+
+    /**
+     * d08 = < { Queue() -> enqueue(1) -> dequeue() } , { first == null, last == null, n == 0 } >
+     */
+    @Test
+    public void d08() throws NoSuchFieldException, IllegalAccessException {
+        // Arrange
+        queue = new Queue<Integer>();
+        Field last = queue.getClass().getDeclaredField("last");
+        last.setAccessible(true);
+        Field first = queue.getClass().getDeclaredField("first");
+        first.setAccessible(true);
+        Field n = queue.getClass().getDeclaredField("n");
+        n.setAccessible(true);
+
+        // Act
+        queue.enqueue(1);
+        queue.dequeue();
+
+        // Assert
+        assertEquals(n.get(queue), 0, "L'attribut n devrait être égal à 0.");
+        assertNull(last.get(queue), "L'attribut last devrait être null.");
+        assertNull(first.get(queue), "L'attribut first devrait être null.");
     }
 
     /**
@@ -169,6 +194,7 @@ public class testTp4 {
         // Assert
         assertNotNull(first.get(queue), "L'attribut first ne devrait pas être null.");
         assertNotNull(last.get(queue), "L'attribut last ne devrait pas être null.");
-        assertTrue((int)n.get(queue) == 1, "L'Attribut n devrait être égal à 1.");
+        assertEquals(first.get(queue), last.get(queue), "Les attributs first et last devraient être égaux.");
+        assertTrue((int)n.get(queue) == 1, "L'attribut n devrait être égal à 1.");
     }
 }
