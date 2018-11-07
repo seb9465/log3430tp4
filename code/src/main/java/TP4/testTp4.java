@@ -45,7 +45,7 @@ public class testTp4 {
     }
 
     /**
-     * d06 = < { Queue() -> enqueue(1) -> size() } , { first == node1, last == node1, n == 1 } >
+     * d06 = < { Queue() -> enqueue(1) -> size() } , { first == 1, last == 1, n == 1  } >
      */
     @Test
     public void d06() {
