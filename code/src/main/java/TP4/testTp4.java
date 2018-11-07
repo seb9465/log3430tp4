@@ -83,10 +83,10 @@ public class testTp4 {
 
     /**
      * d10 = < { Queue() -> enqueue(1) -> enqueue(2) -> size() } ,
-               { first == node1, last == node2, n > 1 } >
+               { first == 1, last == 2, n == 2 } >
      */
     @Test
-    public void d10() throws NoSuchFieldException, IllegalAccessException {
+    public void d10() {
         // Arrange
         queue = new Queue<>();
 
@@ -106,18 +106,12 @@ public class testTp4 {
 
     /**
      * d12 = < { Queue() -> enqueue(1) -> enqueue(2) -> enqueue(3) } ,
-               { first == node1, last == node2, n > 1 } >
+               { first == 1, last == 3, n == 3  } >
      */
     @Test
-    public void d12() throws NoSuchFieldException, IllegalAccessException {
+    public void d12() {
         // Arrange
         queue = new Queue<>();
-        Field last = queue.getClass().getDeclaredField("last");
-        last.setAccessible(true);
-        Field first = queue.getClass().getDeclaredField("first");
-        first.setAccessible(true);
-        Field n = queue.getClass().getDeclaredField("n");
-        n.setAccessible(true);
 
         // Act
         queue.enqueue(1);
@@ -125,10 +119,12 @@ public class testTp4 {
         queue.enqueue(3);
 
         // Assert
-        assertNotNull(first.get(queue), "L'attribut first ne devrait pas être null.");
-        assertNotNull(last.get(queue), "L'attribut last ne devrait pas être null.");
-        assertNotEquals(first.get(queue), last.get(queue), "L'attribut first et l'attribut last devrait être différent.");
-        assertTrue((int)n.get(queue) > 1, "L'attribut n devrait être supérieur à 1.");
+        assertEquals(queue.size(), 3, "La taille de la queue devrait être de 3.");
+        assertNotNull(queue.peek(), "L'attribut first ne devrait pas être null.");
+        assertNotNull(queue.getLast(), "L'attribut last ne devrait pas être null.");
+        assertEquals((int)queue.peek(), 1, "L'attribut first devrait avoir la valeur de 1.");
+        assertEquals((int)queue.getLast(), 3, "L'attribut first devrait avoir la valeur de 3.");
+        assertNotEquals(queue.peek(), queue.getLast(), "L'attribut first et l'attribut last devrait être différent.");
     }
 
 
