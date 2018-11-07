@@ -16,42 +16,32 @@ public class testTp4 {
      * d02 = < { Queue() -> size() } , { first == null, last == null, n == 0 } >
      */
     @Test
-    public void d02() throws NoSuchFieldException, IllegalAccessException {
+    public void d02() {
         // Arrange
         queue = new Queue<>();
-        Field last = queue.getClass().getDeclaredField("last");
-        last.setAccessible(true);
-        Field first = queue.getClass().getDeclaredField("first");
-        first.setAccessible(true);
 
         // Act
         final int resultat = queue.size();
 
         // Assert
         assertEquals(resultat, 0, "L'attribut n devrait être égal à 0.");
-        assertNull(last.get(queue), "L'attribut last devrait être null.");
-        assertNull(first.get(queue), "L'attribut first devrait être null.");
+        assertThrows(NoSuchElementException.class, () -> queue.getLast(), "L'attribut last devrait être null.");
+        assertThrows(NoSuchElementException.class, () -> queue.peek(), "L'attribut first devrait être null.");
+
     }
 
     /**
      * d04 = < { Queue() -> peek() } , { first == null, last == null, n == 0 } >
      */
     @Test
-    public void d04() throws NoSuchFieldException, IllegalAccessException {
+    public void d04() {
         // Arrange
         queue = new Queue<>();
-        Field last = queue.getClass().getDeclaredField("last");
-        last.setAccessible(true);
-        Field first = queue.getClass().getDeclaredField("first");
-        first.setAccessible(true);
-        Field n = queue.getClass().getDeclaredField("n");
-        n.setAccessible(true);
 
         // Act & Assert
         assertThrows(NoSuchElementException.class, () -> queue.peek());
-        assertNull(last.get(queue), "L'attribut last devrait être null.");
-        assertNull(first.get(queue), "L'attribut first devrait être null.");
-        assertEquals(n.get(queue), 0, "L'attribut n devrait être égal à 0.");
+        assertThrows(NoSuchElementException.class, () -> queue.getLast(), "L'attribut last devrait être null.");
+        assertEquals(queue.size(), 0, "L'attribut n devrait être égal à 0.");
     }
 
     /**

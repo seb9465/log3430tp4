@@ -68,6 +68,11 @@ public class Queue<Item> implements Iterable<Item> {
         return first == null;
     }
 
+    public Item getLast() {
+        if(isEmpty()) throw new NoSuchElementException("Queue underflow");
+        return last.item;
+    }
+
     /**
      * Returns the number of items in this queue.
      *
