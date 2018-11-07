@@ -24,7 +24,7 @@ public class testTp4 {
         final int resultat = queue.size();
 
         // Assert
-        assertEquals(resultat, 0, "L'attribut n devrait être égal à 0.");
+        assertEquals(0, resultat, "L'attribut n devrait être égal à 0.");
         assertThrows(NoSuchElementException.class, () -> queue.getLast(), "L'attribut last devrait être null.");
         assertThrows(NoSuchElementException.class, () -> queue.peek(), "L'attribut first devrait être null.");
 
@@ -41,7 +41,7 @@ public class testTp4 {
         // Act & Assert
         assertThrows(NoSuchElementException.class, () -> queue.peek(), "L'attribut first devrait être null.");
         assertThrows(NoSuchElementException.class, () -> queue.getLast(), "L'attribut last devrait être null.");
-        assertEquals(queue.size(), 0, "L'attribut n devrait être égal à 0.");
+        assertEquals(0, queue.size(), "L'attribut n devrait être égal à 0.");
     }
 
     /**
@@ -57,11 +57,11 @@ public class testTp4 {
         final int taille = queue.size();
 
         // Assert
-        assertEquals(taille, 1, "La taille de la queue devrait être de 1.");
+        assertEquals(1, taille, "La taille de la queue devrait être de 1.");
         assertNotNull(queue.peek(), "L'attribut first ne devrait pas être null.");
         assertNotNull(queue.getLast(), "L'attribut last ne devrait pas être null.");
-        assertEquals((int)queue.peek(), 1, "L'attribut first devrait avoir une valeur de 1.");
-        assertEquals((int)queue.getLast(), 1, "L'attribut first devrait avoir une valeur de 1.");
+        assertEquals(1, (int)queue.peek(), "L'attribut first devrait avoir une valeur de 1.");
+        assertEquals(1, (int)queue.getLast(), "L'attribut first devrait avoir une valeur de 1.");
         assertEquals(queue.peek(), queue.getLast(), "Les attributs first et last devraient être égaux.");
     }
 
@@ -80,7 +80,7 @@ public class testTp4 {
         // Assert
         assertThrows(NoSuchElementException.class, () -> queue.peek(), "L'attribut first devrait être null.");
         assertThrows(NoSuchElementException.class, () -> queue.getLast(), "L'attribut last devrait être null.");
-        assertEquals(queue.size(), 0, "L'attribut n devrait être égal à 0.");
+        assertEquals(0, queue.size(), "L'attribut n devrait être égal à 0.");
     }
 
     /**
