@@ -135,15 +135,9 @@ public class testTp4 {
      *         { first == 2, last == 2, n == 1 } >
      */
     @Test
-    public void d14() throws NoSuchFieldException, IllegalAccessException {
+    public void d14() {
         // Arrange
         queue = new Queue<>();
-        Field last = queue.getClass().getDeclaredField("last");
-        last.setAccessible(true);
-        Field first = queue.getClass().getDeclaredField("first");
-        first.setAccessible(true);
-        Field n = queue.getClass().getDeclaredField("n");
-        n.setAccessible(true);
 
         // Act
         queue.enqueue(1);
@@ -151,11 +145,11 @@ public class testTp4 {
         queue.dequeue();
 
         // Assert
-        assertEquals(queue.size(), 1, "La taille de la queue devrait être de 1.");
+        assertEquals(1, queue.size(), "La taille de la queue devrait être de 1.");
         assertNotNull(queue.peek(), "L'attribut first ne devrait pas être null.");
         assertNotNull(queue.getLast(), "L'attribut last ne devrait pas être null.");
-        assertEquals((int)queue.peek(), 2, "L'attribut first devrait avoir une valeur de 2.");
-        assertEquals((int)queue.getLast(), 2, "L'attribut first devrait avoir une valeur de 2.");
+        assertEquals(2, (int)queue.peek(), "L'attribut first devrait avoir une valeur de 2.");
+        assertEquals(2, (int)queue.getLast(), "L'attribut first devrait avoir une valeur de 2.");
         assertEquals(queue.peek(), queue.getLast(), "Les attributs first et last devraient être égaux.");
     }
 }
