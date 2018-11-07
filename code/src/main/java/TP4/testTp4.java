@@ -121,11 +121,11 @@ public class testTp4 {
         queue.enqueue(3);
 
         // Assert
-        assertEquals(queue.size(), 3, "La taille de la queue devrait être de 3.");
+        assertEquals(3, queue.size(), "La taille de la queue devrait être de 3.");
         assertNotNull(queue.peek(), "L'attribut first ne devrait pas être null.");
         assertNotNull(queue.getLast(), "L'attribut last ne devrait pas être null.");
-        assertEquals((int)queue.peek(), 1, "L'attribut first devrait avoir une valeur de 1.");
-        assertEquals((int)queue.getLast(), 3, "L'attribut first devrait avoir une valeur de 3.");
+        assertEquals(1, (int)queue.peek(), "L'attribut first devrait avoir une valeur de 1.");
+        assertEquals(3, (int)queue.getLast(), "L'attribut first devrait avoir une valeur de 3.");
         assertNotEquals(queue.peek(), queue.getLast(), "L'attribut first et l'attribut last devrait être différent.");
     }
 
