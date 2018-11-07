@@ -60,6 +60,8 @@ public class testTp4 {
         assertEquals(taille, 1, "La taille de la queue devrait être de 1.");
         assertNotNull(queue.peek(), "L'attribut first ne devrait pas être null.");
         assertNotNull(queue.getLast(), "L'attribut last ne devrait pas être null.");
+        assertEquals((int)queue.peek(), 1, "L'attribut first devrait avoir une valeur de 1.");
+        assertEquals((int)queue.getLast(), 1, "L'attribut first devrait avoir une valeur de 1.");
         assertEquals(queue.peek(), queue.getLast(), "Les attributs first et last devraient être égaux.");
     }
 
@@ -99,8 +101,8 @@ public class testTp4 {
         assertEquals(taille, 2, "La taille de la queue devrait être de 2.");
         assertNotNull(queue.peek(), "L'attribut first ne devrait pas être null.");
         assertNotNull(queue.getLast(), "L'attribut last ne devrait pas être null.");
-        assertEquals((int)queue.peek(), 1, "L'attribut first devrait avoir la valeur de 1.");
-        assertEquals((int)queue.getLast(), 2, "L'attribut first devrait avoir la valeur de 2.");
+        assertEquals((int)queue.peek(), 1, "L'attribut first devrait avoir une valeur de 1.");
+        assertEquals((int)queue.getLast(), 2, "L'attribut first devrait avoir une valeur de 2.");
         assertNotEquals(queue.peek(), queue.getLast(), "L'attribut first et l'attribut last devrait être différent.");
     }
 
@@ -122,15 +124,15 @@ public class testTp4 {
         assertEquals(queue.size(), 3, "La taille de la queue devrait être de 3.");
         assertNotNull(queue.peek(), "L'attribut first ne devrait pas être null.");
         assertNotNull(queue.getLast(), "L'attribut last ne devrait pas être null.");
-        assertEquals((int)queue.peek(), 1, "L'attribut first devrait avoir la valeur de 1.");
-        assertEquals((int)queue.getLast(), 3, "L'attribut first devrait avoir la valeur de 3.");
+        assertEquals((int)queue.peek(), 1, "L'attribut first devrait avoir une valeur de 1.");
+        assertEquals((int)queue.getLast(), 3, "L'attribut first devrait avoir une valeur de 3.");
         assertNotEquals(queue.peek(), queue.getLast(), "L'attribut first et l'attribut last devrait être différent.");
     }
 
 
     /**
      * d14 = < { Queue() -> enqueue(1) -> enqueue(2) -> dequeue() } ,
-     *         { first == 1, last == 1, n == 1 } >
+     *         { first == 2, last == 2, n == 1 } >
      */
     @Test
     public void d14() throws NoSuchFieldException, IllegalAccessException {
@@ -152,8 +154,8 @@ public class testTp4 {
         assertEquals(queue.size(), 1, "La taille de la queue devrait être de 1.");
         assertNotNull(queue.peek(), "L'attribut first ne devrait pas être null.");
         assertNotNull(queue.getLast(), "L'attribut last ne devrait pas être null.");
-        assertEquals((int)queue.peek(), 1, "L'attribut first devrait avoir une valeur de 1.");
-        assertEquals((int)queue.getLast(), 1, "L'attribut first devrait avoir une valeur de 1.");
+        assertEquals((int)queue.peek(), 2, "L'attribut first devrait avoir une valeur de 2.");
+        assertEquals((int)queue.getLast(), 2, "L'attribut first devrait avoir une valeur de 2.");
         assertEquals(queue.peek(), queue.getLast(), "Les attributs first et last devraient être égaux.");
     }
 }
