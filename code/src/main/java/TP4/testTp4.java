@@ -244,9 +244,28 @@ public class testTp4 {
     }
 
     /**
-     * 
+     * d13 = < { Queue() -> enqueue(1) -> enqueue(2) -> enqueue(3) -> dequeue() } ,
+     *              { first == 1, last == 2, n == 2 } >
      */
+    @Test
+    public void d13() {
+        // Arrange
+        queue = new Queue<>();
 
+        // Act
+        queue.enqueue(1);
+        queue.enqueue(2);
+        queue.enqueue(3);
+        queue.dequeue();
+
+        // Assert
+        assertEquals(3, queue.size(), "La taille de la queue devrait être de 3.");
+        assertNotNull(queue.peek(), "L'attribut first ne devrait pas être null.");
+        assertNotNull(queue.getLast(), "L'attribut last ne devrait pas être null.");
+        assertEquals(1, (int)queue.peek(), "L'attribut first devrait avoir une valeur de 1.");
+        assertEquals(3, (int)queue.getLast(), "L'attribut first devrait avoir une valeur de 3.");
+        assertNotEquals(queue.peek(), queue.getLast(), "L'attribut first et l'attribut last devrait être différent.");
+    }
 
     /**
      * d14 = < { Queue() -> enqueue(1) -> enqueue(2) -> dequeue() } ,
