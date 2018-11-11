@@ -74,6 +74,27 @@ public class testTp4 {
     }
 
     /**
+     * d05 = < { Queue() -> enqueue(1) -> isEmpty() } , { first == 1, last == 1, n == 1 } >
+     */
+    @Test
+    public void d05() {
+        // Arrange
+        queue = new Queue<>();
+
+        // Act
+        queue.enqueue(1);
+        final boolean resultat = queue.isEmpty();
+
+        // Assert
+        assertFalse(resultat, "La queue ne devrait pas être vide.");
+        assertNotNull(queue.peek(), "L'attribut first ne devrait pas être null.");
+        assertNotNull(queue.getLast(), "L'attribut last ne devrait pas être null.");
+        assertEquals(1, (int)queue.peek(), "L'attribut first devrait avoir une valeur de 1.");
+        assertEquals(1, (int)queue.getLast(), "L'attribut first devrait avoir une valeur de 1.");
+        assertEquals(queue.peek(), queue.getLast(), "Les attributs first et last devraient être égaux.");
+    }
+
+    /**
      * d06 = < { Queue() -> enqueue(1) -> size() } , { first == 1, last == 1, n == 1  } >
      */
     @Test
@@ -90,6 +111,25 @@ public class testTp4 {
         assertNotNull(queue.peek(), "L'attribut first ne devrait pas être null.");
         assertNotNull(queue.getLast(), "L'attribut last ne devrait pas être null.");
         assertEquals(1, (int)queue.peek(), "L'attribut first devrait avoir une valeur de 1.");
+        assertEquals(1, (int)queue.getLast(), "L'attribut first devrait avoir une valeur de 1.");
+        assertEquals(queue.peek(), queue.getLast(), "Les attributs first et last devraient être égaux.");
+    }
+
+    /**
+     * d07 = < { Queue() -> enqueue(1) -> peek() } , { first == 1, last == 1, n == 1 } >
+     */
+    @Test
+    public void d07() {
+        // Arrange
+        queue = new Queue<>();
+
+        // Act
+        queue.enqueue(1);
+        final int elem = queue.peek();
+
+        // Assert
+        assertEquals(1, elem, "Un appel à la fonciton peek devrait retourner la valeur 1.");
+        assertNotNull(queue.getLast(), "L'attribut last ne devrait pas être null.");
         assertEquals(1, (int)queue.getLast(), "L'attribut first devrait avoir une valeur de 1.");
         assertEquals(queue.peek(), queue.getLast(), "Les attributs first et last devraient être égaux.");
     }
