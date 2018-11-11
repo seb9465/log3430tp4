@@ -153,6 +153,29 @@ public class testTp4 {
     }
 
     /**
+     * d09 = < { Queue() -> enqueue(1) -> enqueue(2) -> isEmpty() } ,
+     *         { first == 1, last == 2, n == 2 } >
+     */
+    @Test
+    public void d09() {
+        // Arrange
+        queue = new Queue<>();
+
+        // Act
+        queue.enqueue(1);
+        queue.enqueue(2);
+        final boolean estVide = queue.isEmpty();
+
+        // Assert
+        assertFalse(estVide, "La Queue ne devrait pas être vide.");
+        assertNotNull(queue.peek(), "L'attribut first ne devrait pas être null.");
+        assertNotNull(queue.getLast(), "L'attribut last ne devrait pas être null.");
+        assertEquals(1, (int)queue.peek(), "L'attribut first devrait avoir une valeur de 1.");
+        assertEquals(2, (int)queue.getLast(), "L'attribut first devrait avoir une valeur de 2.");
+        assertNotEquals(queue.peek(), queue.getLast(), "L'attribut first et l'attribut last devrait être différent.");
+    }
+
+    /**
      * d10 = < { Queue() -> enqueue(1) -> enqueue(2) -> size() } ,
                { first == 1, last == 2, n == 2 } >
      */
@@ -174,6 +197,12 @@ public class testTp4 {
         assertEquals(2, (int)queue.getLast(), "L'attribut first devrait avoir une valeur de 2.");
         assertNotEquals(queue.peek(), queue.getLast(), "L'attribut first et l'attribut last devrait être différent.");
     }
+
+    /**
+     * d11 = < { Queue() -> enqueue(1) -> enqueue(2) -> peek() } ,
+     *         { first == 1, last == 2, n == 2 } >
+     */
+
 
     /**
      * d12 = < { Queue() -> enqueue(1) -> enqueue(2) -> enqueue(3) } ,
