@@ -11,6 +11,23 @@ public class testTp4 {
     private Queue<Integer> queue;
 
     /**
+     * d01 = < { Queue() -> isEmpty() } , { first == null, last == null, n == 0 } >
+     */
+    @Test
+    public void d01() {
+        // Arrange
+        queue = new Queue<>();
+
+        // Act
+        final boolean resultat = queue.isEmpty();
+
+        // Assert
+        assertTrue(resultat, "L'attribut n devrait être égal à 0.");
+        assertThrows(NoSuchElementException.class, () -> queue.getLast(), "L'attribut last devrait être null.");
+        assertThrows(NoSuchElementException.class, () -> queue.peek(), "L'attribut first devrait être null.");
+    }
+
+    /**
      * d02 = < { Queue() -> size() } , { first == null, last == null, n == 0 } >
      */
     @Test
@@ -25,7 +42,21 @@ public class testTp4 {
         assertEquals(0, resultat, "L'attribut n devrait être égal à 0.");
         assertThrows(NoSuchElementException.class, () -> queue.getLast(), "L'attribut last devrait être null.");
         assertThrows(NoSuchElementException.class, () -> queue.peek(), "L'attribut first devrait être null.");
+    }
 
+    /**
+     * d03 = < { Queue() -> dequeue() } , { first == null, last == null, n == 0 } >
+     */
+    @Test
+    public void d03() {
+        // Arrange
+        queue = new Queue<>();
+
+        // Act & Assert
+        assertThrows(NoSuchElementException.class, () -> queue.dequeue(), "Un appel à la fonction dequeue devrait lancer une exception lorsque la Queue est vide.");
+        assertThrows(NoSuchElementException.class, () -> queue.peek(), "L'attribut first devrait être null.");
+        assertThrows(NoSuchElementException.class, () -> queue.getLast(), "L'attribut last devrait être null.");
+        assertEquals(0, queue.size(), "L'attribut n devrait être égal à 0.");
     }
 
     /**
